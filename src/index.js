@@ -1,17 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Card from "./Card";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// After selecting the element with id = 'root'
+// we pass down this element to React so it knows where to start
+const htmlRoot = document.getElementById("root");
+const root = ReactDOM.createRoot(htmlRoot);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// After telling React where to start, now we have
+// to tell it which component to render, this case <App />
+root.render(<Card />);
