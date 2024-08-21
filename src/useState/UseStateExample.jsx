@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+// const [value, setValue] = useState(defaultValue)
+
 function UseStateExample() {
   // by initialazing useState at 0, it returns 2 values
   // count = value of the state
