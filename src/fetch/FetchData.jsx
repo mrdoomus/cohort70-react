@@ -14,6 +14,8 @@ const FetchData = () => {
       setPosts(translatedPosts);
     } catch (error) {
       console.log(error);
+    } finally {
+      console.log("Finally, the request was finished");
     }
   }
 
