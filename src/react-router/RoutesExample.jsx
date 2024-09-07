@@ -9,7 +9,7 @@ import Profile from "./routes/Profile";
 function RoutesExample() {
   return (
     <BrowserRouter>
-      {/* <div>
+      <div>
         <nav>
           <ul>
             <li>
@@ -21,17 +21,20 @@ function RoutesExample() {
             <li>
               <a href="/contact">Contact</a>
             </li>
+            <li>
+              <a href="/profile">Profile</a>
+            </li>
           </ul>
-        </nav> */}
+        </nav>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/about/:firstName" element={<About />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      {/* </div> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/about/:firstName" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }
