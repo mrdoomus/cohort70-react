@@ -1,10 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Camilo from "./use-context/students-example/Camilo";
-import { MessageProvider } from "./use-context/students-example/MessageProvider";
-import Todos from "./use-context/todos-example/Todos";
-import { TodosProvider } from "./use-context/todos-example/TodosProvider";
-import MotivationalPhrase from "./use-context/todos-example/MotivationalPhrase";
+import { Provider } from "./use-context/flux-example/FluxProvider";
+import Layout from "./use-context/flux-example/layout";
 
 // After selecting the element with id = 'root'
 // we pass down this element to React so it knows where to start
@@ -13,9 +10,8 @@ const root = ReactDOM.createRoot(htmlRoot);
 
 root.render(
   <div>
-    <TodosProvider>
-      <MotivationalPhrase />
-      <Todos />
-    </TodosProvider>
+    <Provider>
+      <Layout />
+    </Provider>
   </div>
 );
