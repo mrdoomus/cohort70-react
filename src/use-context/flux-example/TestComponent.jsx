@@ -4,7 +4,7 @@ import { Context } from "./FluxProvider";
 
 function TestComponent() {
   const [text, setText] = useState();
-  const { store, dispatch } = useContext(Context);
+  const { state, dispatch } = useContext(Context);
 
   function handleOnChange(event) {
     setText(event.target.value);
@@ -29,7 +29,7 @@ function TestComponent() {
       <button onClick={handleOnAdd}>Click me to add new content!</button>
 
       <ul>
-        {store.mottos.map((motto, index) => (
+        {state.mottos.map((motto, index) => (
           <div style={{ display: "Flex" }}>
             <li key={motto}>
               <a href={`/${index}`}>{motto}</a>

@@ -14,6 +14,7 @@ export const TestReducer = (state, action) => {
       newState.mottos.splice(action.payload, 1);
       return newState;
     case REDUCER_ACTION_TYPES.FETCH:
+      return state.mottos;
     default:
       return state;
   }

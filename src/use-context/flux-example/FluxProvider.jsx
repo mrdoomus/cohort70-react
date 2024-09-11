@@ -12,9 +12,9 @@ const initialContext = {
 export const Context = React.createContext(initialContext);
 
 export const Provider = ({ children }) => {
-  const [store, dispatch] = useReducer(TestReducer, initialContext);
+  const [state, dispatch] = useReducer(TestReducer, initialContext);
 
   return (
-    <Context.Provider value={{ store, dispatch }}>{children}</Context.Provider>
+    <Context.Provider value={{ state, dispatch }}>{children}</Context.Provider>
   );
 };
